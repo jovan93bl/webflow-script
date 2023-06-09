@@ -1,0 +1,32 @@
+<div id="app">
+  <button id="search-button">dugme</button>
+  <div id="search-container">Test div</div>
+
+  <style>
+    .search-show {
+      display: none;
+    }
+
+    .search-hide {
+      display: none;
+    }
+  </style>
+  <script>
+    document
+      .getElementById('search-button')
+      .addEventListener('click', toggleSearchContainer);
+    const searchContainer = document.getElementById('search-container');
+
+    function toggleSearchContainer() {
+      const hidden = document.getElementsByClassName('search-hide');
+      const show = document.getElementsByClassName('search-show');
+      if (show) {
+        searchContainer.className.replace(' search-show', 'search-hide');
+      }
+
+      if (hidden) {
+        searchContainer.className.replace(' search-hide', 'search-show');
+      }
+    }
+  </script>
+</div>
